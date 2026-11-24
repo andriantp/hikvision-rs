@@ -1,0 +1,29 @@
+# Rust build artifacts
+/target/
+
+# Rust generated files
+**/*.rs.bk
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Snapshot images written by the examples
+# (gitignore has no {a,b} brace expansion, so one pattern per extension)
+examples/*.png
+examples/*.jpg
+examples/*.jpeg
