@@ -1,0 +1,18 @@
+[package]
+name = "hikvision-rs"
+version = "0.1.0"
+edition = "2024"
+description = "Hikvision ISAPI SDK for Rust"
+license = "MIT"
+
+[dependencies]
+# default-features = false: only rustls is compiled (no native-tls/OpenSSL),
+# and unused features (json, http2, charset) are left out.
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+digest_auth = { version = "0.3", default-features = false }
+bytes = "1"
+quick-xml = { version = "0.38", features = ["serialize"] }
+serde = { version = "1", features = ["derive"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt"] }
